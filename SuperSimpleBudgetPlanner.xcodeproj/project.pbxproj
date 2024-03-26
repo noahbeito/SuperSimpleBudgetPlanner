@@ -14,6 +14,22 @@
 		2F115CA02B9E838C004C3486 /* SuperSimpleBudgetPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F115C9F2B9E838C004C3486 /* SuperSimpleBudgetPlannerTests.swift */; };
 		2F115CAA2B9E838C004C3486 /* SuperSimpleBudgetPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F115CA92B9E838C004C3486 /* SuperSimpleBudgetPlannerUITests.swift */; };
 		2F115CAC2B9E838C004C3486 /* SuperSimpleBudgetPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F115CAB2B9E838C004C3486 /* SuperSimpleBudgetPlannerUITestsLaunchTests.swift */; };
+		2F115CB92B9E85A8004C3486 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F115CB82B9E85A8004C3486 /* Supabase.swift */; };
+		2F67AF312BB21FB500EF0372 /* ExpensesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67AF302BB21FB500EF0372 /* ExpensesData.swift */; };
+		2F78D6DB2BA532F70096D6AA /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6DA2BA532F60096D6AA /* AddExpenseView.swift */; };
+		2F78D6DD2BA675160096D6AA /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6DC2BA675160096D6AA /* UserSession.swift */; };
+		2F78D6DF2BA675C90096D6AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6DE2BA675C90096D6AA /* User.swift */; };
+		2F78D6E12BA67CE60096D6AA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6E02BA67CE60096D6AA /* Expense.swift */; };
+		2F78D6E32BA67DDF0096D6AA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6E22BA67DDF0096D6AA /* DateFormatter.swift */; };
+		2FE98C722B9E8899008EAD23 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C712B9E8899008EAD23 /* Auth */; };
+		2FE98C742B9E8899008EAD23 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C732B9E8899008EAD23 /* Functions */; };
+		2FE98C762B9E8899008EAD23 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C752B9E8899008EAD23 /* PostgREST */; };
+		2FE98C782B9E8899008EAD23 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C772B9E8899008EAD23 /* Realtime */; };
+		2FE98C7A2B9E8899008EAD23 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C792B9E8899008EAD23 /* Storage */; };
+		2FE98C7C2B9E8899008EAD23 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C7B2B9E8899008EAD23 /* Supabase */; };
+		2FE98C802B9E89CA008EAD23 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE98C7F2B9E89CA008EAD23 /* LoginView.swift */; };
+		2FE98C822B9E89E5008EAD23 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE98C812B9E89E5008EAD23 /* SignupView.swift */; };
+		2FE98C842B9E8EC7008EAD23 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE98C832B9E8EC7008EAD23 /* ExpenseListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,16 @@
 		2F115CA52B9E838C004C3486 /* SuperSimpleBudgetPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperSimpleBudgetPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F115CA92B9E838C004C3486 /* SuperSimpleBudgetPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperSimpleBudgetPlannerUITests.swift; sourceTree = "<group>"; };
 		2F115CAB2B9E838C004C3486 /* SuperSimpleBudgetPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperSimpleBudgetPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F115CB82B9E85A8004C3486 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		2F67AF302BB21FB500EF0372 /* ExpensesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesData.swift; sourceTree = "<group>"; };
+		2F78D6DA2BA532F60096D6AA /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
+		2F78D6DC2BA675160096D6AA /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		2F78D6DE2BA675C90096D6AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2F78D6E02BA67CE60096D6AA /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		2F78D6E22BA67DDF0096D6AA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		2FE98C7F2B9E89CA008EAD23 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2FE98C812B9E89E5008EAD23 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		2FE98C832B9E8EC7008EAD23 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +77,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FE98C762B9E8899008EAD23 /* PostgREST in Frameworks */,
+				2FE98C742B9E8899008EAD23 /* Functions in Frameworks */,
+				2FE98C7C2B9E8899008EAD23 /* Supabase in Frameworks */,
+				2FE98C722B9E8899008EAD23 /* Auth in Frameworks */,
+				2FE98C7A2B9E8899008EAD23 /* Storage in Frameworks */,
+				2FE98C782B9E8899008EAD23 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +130,16 @@
 				2F115C902B9E8389004C3486 /* ContentView.swift */,
 				2F115C922B9E838B004C3486 /* Assets.xcassets */,
 				2F115C942B9E838B004C3486 /* Preview Content */,
+				2F115CB82B9E85A8004C3486 /* Supabase.swift */,
+				2FE98C7F2B9E89CA008EAD23 /* LoginView.swift */,
+				2FE98C812B9E89E5008EAD23 /* SignupView.swift */,
+				2FE98C832B9E8EC7008EAD23 /* ExpenseListView.swift */,
+				2F78D6DA2BA532F60096D6AA /* AddExpenseView.swift */,
+				2F78D6DC2BA675160096D6AA /* UserSession.swift */,
+				2F78D6DE2BA675C90096D6AA /* User.swift */,
+				2F78D6E02BA67CE60096D6AA /* Expense.swift */,
+				2F78D6E22BA67DDF0096D6AA /* DateFormatter.swift */,
+				2F67AF302BB21FB500EF0372 /* ExpensesData.swift */,
 			);
 			path = SuperSimpleBudgetPlanner;
 			sourceTree = "<group>";
@@ -143,6 +185,14 @@
 			dependencies = (
 			);
 			name = SuperSimpleBudgetPlanner;
+			packageProductDependencies = (
+				2FE98C712B9E8899008EAD23 /* Auth */,
+				2FE98C732B9E8899008EAD23 /* Functions */,
+				2FE98C752B9E8899008EAD23 /* PostgREST */,
+				2FE98C772B9E8899008EAD23 /* Realtime */,
+				2FE98C792B9E8899008EAD23 /* Storage */,
+				2FE98C7B2B9E8899008EAD23 /* Supabase */,
+			);
 			productName = SuperSimpleBudgetPlanner;
 			productReference = 2F115C8B2B9E8389004C3486 /* SuperSimpleBudgetPlanner.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 2F115C822B9E8389004C3486;
+			packageReferences = (
+				2FE98C702B9E8899008EAD23 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 2F115C8C2B9E8389004C3486 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +311,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F115C912B9E8389004C3486 /* ContentView.swift in Sources */,
+				2FE98C842B9E8EC7008EAD23 /* ExpenseListView.swift in Sources */,
+				2F115CB92B9E85A8004C3486 /* Supabase.swift in Sources */,
+				2FE98C802B9E89CA008EAD23 /* LoginView.swift in Sources */,
+				2F78D6E12BA67CE60096D6AA /* Expense.swift in Sources */,
+				2F78D6E32BA67DDF0096D6AA /* DateFormatter.swift in Sources */,
+				2F78D6DB2BA532F70096D6AA /* AddExpenseView.swift in Sources */,
+				2F67AF312BB21FB500EF0372 /* ExpensesData.swift in Sources */,
+				2F78D6DF2BA675C90096D6AA /* User.swift in Sources */,
 				2F115C8F2B9E8389004C3486 /* SuperSimpleBudgetPlannerApp.swift in Sources */,
+				2FE98C822B9E89E5008EAD23 /* SignupView.swift in Sources */,
+				2F78D6DD2BA675160096D6AA /* UserSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +645,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FE98C702B9E8899008EAD23 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FE98C712B9E8899008EAD23 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE98C702B9E8899008EAD23 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		2FE98C732B9E8899008EAD23 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE98C702B9E8899008EAD23 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		2FE98C752B9E8899008EAD23 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE98C702B9E8899008EAD23 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		2FE98C772B9E8899008EAD23 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE98C702B9E8899008EAD23 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		2FE98C792B9E8899008EAD23 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE98C702B9E8899008EAD23 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		2FE98C7B2B9E8899008EAD23 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FE98C702B9E8899008EAD23 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F115C832B9E8389004C3486 /* Project object */;
 }
