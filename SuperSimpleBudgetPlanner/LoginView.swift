@@ -15,7 +15,7 @@ struct LoginView: View {
     @State private var alertMessage = ""
     @State private var accountCreationDate: Date?
     @EnvironmentObject var userSession: UserSession
-    let expensesData = ExpensesData()
+    @EnvironmentObject var expensesData: ExpensesData
     @Binding var showSignupView: Bool
 
 
@@ -42,6 +42,14 @@ struct LoginView: View {
                 Button(action: {
                     Task {
                     await login()
+                        let dates = datesInRange(start: Date(), end: accountCreationDate ?? Date())
+                        expensesData.isLoading = true
+                    for date in dates {
+                        let dateWithoutTime = stripTime(from: date)
+                        let totalExpenses = await expensesData.fetchTotalExpenseAmount(for: date)
+                        expensesData.totalExpensesByDay[dateWithoutTime] = totalExpenses
+                    }
+                        expensesData.isLoading = false
                     }
                 }) {
                     Text("Log In")
@@ -66,7 +74,7 @@ struct LoginView: View {
                 .padding([.leading, .trailing], 20)
                 .navigationDestination(isPresented: $navigateToExpenseListView) {
                     if let accountCreationDate = accountCreationDate {
-                        ExpenseListView(expensesData: expensesData, accountCreationDate: accountCreationDate)
+                        ExpenseListView(userSession: _userSession, accountCreationDate: accountCreationDate)
                     }
                 }
                 .alert(isPresented: $showingAlert) {
@@ -82,18 +90,41 @@ struct LoginView: View {
                 password: password
             )
             
-            // Fetch the account creation date from the auth.users table.
-            let userData = try await supabase.auth.user()
-            let user = User(id: userData.id, email: userData.email ?? "No Email", createdAt: userData.createdAt)
+            // Fetch the user data
+            let userAuthData = try await supabase.auth.user()
+            let response: [User] = try await supabase.database
+                .from("users")
+                .select()
+                .eq("id", value: userAuthData.id)
+                .execute()
+                .value
+                
+            let user = User(id: userAuthData.id, email: userAuthData.email ?? "No Email", created_at: userAuthData.createdAt, annual_income: response[0].annual_income)
             
             userSession.user = user
-            accountCreationDate = user.createdAt
+            accountCreationDate = userAuthData.createdAt
             navigateToExpenseListView = true
         } catch {
             print("Error logging in: \(error)")
             alertMessage = "Error logging in: \(error.localizedDescription)"
             showingAlert = true
         }
+    }
+    
+    func datesInRange(start: Date, end: Date) -> [Date] {
+        var dates: [Date] = []
+        var currentDate = start
+        while currentDate >= end {
+            dates.append(currentDate)
+            currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!
+        }
+        return dates
+    }
+    
+    func stripTime(from date: Date) -> Date {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: date)
+        return calendar.date(from: components)!
     }
 }
 

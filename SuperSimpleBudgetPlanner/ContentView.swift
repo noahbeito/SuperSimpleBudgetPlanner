@@ -25,17 +25,21 @@ class AuthViewModel: ObservableObject {
 struct ContentView: View {
     @StateObject private var authViewModel = AuthViewModel()
     @StateObject private var expensesData = ExpensesData()
+    @StateObject private var userSession = UserSession()
     @State private var showSignupView = false
 
     var body: some View {
         if authViewModel.isLoggedIn, let accountCreationDate = authViewModel.accountCreationDate {
-            ExpenseListView(expensesData: expensesData, accountCreationDate: accountCreationDate)
+            ExpenseListView(accountCreationDate: accountCreationDate)
+                .environmentObject(userSession)
+                .environmentObject(expensesData)
                 .transition(.move(edge: .trailing))
         } else if showSignupView {
             SignupView(showSignupView: $showSignupView)
                 .transition(.move(edge: .trailing))
         } else {
             LoginView(showSignupView: $showSignupView)
+                .environmentObject(expensesData)
                 .transition(.move(edge: .trailing))
         }
     }

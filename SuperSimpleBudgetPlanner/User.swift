@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
     let id: UUID
-    let email: String
-    let createdAt: Date
+    let email: String?
+    let created_at: Date
+    var annual_income: Int
 }

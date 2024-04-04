@@ -8,5 +8,5 @@
 import Foundation
 
 class UserSession: ObservableObject {
-    @Published var user: User? = nil
+    @Published var user: User = User(id: UUID(), email: "", created_at: Date(), annual_income: 0)
 }

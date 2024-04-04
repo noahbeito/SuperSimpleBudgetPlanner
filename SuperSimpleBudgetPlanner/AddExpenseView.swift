@@ -23,7 +23,11 @@ struct AddExpenseView: View {
                 DatePicker("Date", selection: $date, displayedComponents: .date)
                 TextField("Description", text: $description)
             }
-            .navigationBarItems(leading: Button("Cancel", action: dismiss.callAsFunction), trailing: Button("Add", action: submit))
+            .navigationBarItems(
+                leading: Button("Cancel", action: dismiss.callAsFunction)
+                    .foregroundColor(Color("SimpleGreen")),
+                trailing: Button("Add", action: submit)
+                    .foregroundColor(Color("SimpleGreen")))
         }
     }
 
@@ -34,6 +38,3 @@ struct AddExpenseView: View {
     }
 }
 
-#Preview {
-    AddExpenseView { _, _, _ in }
-}

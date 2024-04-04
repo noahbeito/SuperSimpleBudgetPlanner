@@ -17,10 +17,11 @@
 		2F115CB92B9E85A8004C3486 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F115CB82B9E85A8004C3486 /* Supabase.swift */; };
 		2F67AF312BB21FB500EF0372 /* ExpensesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67AF302BB21FB500EF0372 /* ExpensesData.swift */; };
 		2F78D6DB2BA532F70096D6AA /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6DA2BA532F60096D6AA /* AddExpenseView.swift */; };
-		2F78D6DD2BA675160096D6AA /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6DC2BA675160096D6AA /* UserSession.swift */; };
 		2F78D6DF2BA675C90096D6AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6DE2BA675C90096D6AA /* User.swift */; };
 		2F78D6E12BA67CE60096D6AA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6E02BA67CE60096D6AA /* Expense.swift */; };
 		2F78D6E32BA67DDF0096D6AA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78D6E22BA67DDF0096D6AA /* DateFormatter.swift */; };
+		2F96A8A42BBA28FC008624CB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96A8A32BBA28FC008624CB /* SettingsView.swift */; };
+		2F96A8A82BBA3CF1008624CB /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96A8A72BBA3CF1008624CB /* UserSession.swift */; };
 		2FE98C722B9E8899008EAD23 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C712B9E8899008EAD23 /* Auth */; };
 		2FE98C742B9E8899008EAD23 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C732B9E8899008EAD23 /* Functions */; };
 		2FE98C762B9E8899008EAD23 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE98C752B9E8899008EAD23 /* PostgREST */; };
@@ -63,10 +64,11 @@
 		2F115CB82B9E85A8004C3486 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		2F67AF302BB21FB500EF0372 /* ExpensesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesData.swift; sourceTree = "<group>"; };
 		2F78D6DA2BA532F60096D6AA /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
-		2F78D6DC2BA675160096D6AA /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		2F78D6DE2BA675C90096D6AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2F78D6E02BA67CE60096D6AA /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		2F78D6E22BA67DDF0096D6AA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		2F96A8A32BBA28FC008624CB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2F96A8A72BBA3CF1008624CB /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		2FE98C7F2B9E89CA008EAD23 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FE98C812B9E89E5008EAD23 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		2FE98C832B9E8EC7008EAD23 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
@@ -134,12 +136,13 @@
 				2FE98C7F2B9E89CA008EAD23 /* LoginView.swift */,
 				2FE98C812B9E89E5008EAD23 /* SignupView.swift */,
 				2FE98C832B9E8EC7008EAD23 /* ExpenseListView.swift */,
+				2F96A8A72BBA3CF1008624CB /* UserSession.swift */,
 				2F78D6DA2BA532F60096D6AA /* AddExpenseView.swift */,
-				2F78D6DC2BA675160096D6AA /* UserSession.swift */,
 				2F78D6DE2BA675C90096D6AA /* User.swift */,
 				2F78D6E02BA67CE60096D6AA /* Expense.swift */,
 				2F78D6E22BA67DDF0096D6AA /* DateFormatter.swift */,
 				2F67AF302BB21FB500EF0372 /* ExpensesData.swift */,
+				2F96A8A32BBA28FC008624CB /* SettingsView.swift */,
 			);
 			path = SuperSimpleBudgetPlanner;
 			sourceTree = "<group>";
@@ -321,7 +324,8 @@
 				2F78D6DF2BA675C90096D6AA /* User.swift in Sources */,
 				2F115C8F2B9E8389004C3486 /* SuperSimpleBudgetPlannerApp.swift in Sources */,
 				2FE98C822B9E89E5008EAD23 /* SignupView.swift in Sources */,
-				2F78D6DD2BA675160096D6AA /* UserSession.swift in Sources */,
+				2F96A8A82BBA3CF1008624CB /* UserSession.swift in Sources */,
+				2F96A8A42BBA28FC008624CB /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

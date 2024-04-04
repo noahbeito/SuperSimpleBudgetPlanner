@@ -9,6 +9,7 @@ import Foundation
 
 class ExpensesData: ObservableObject {
     @Published var totalExpensesByDay: [Date: Double] = [:]
+    @Published var isLoading = false
     
     func addExpense(amount: Double, date: Date, description: String) async {
         let dateString = DateFormatter.yearMonthDay.string(from: date)
