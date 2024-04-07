@@ -52,4 +52,4 @@ This file contains an extension of the DateFormatter class to format the date st
 This file defines a ViewModel that provides the data and behavior needed by the View to display and manipulate the expenses. It helps the View interact with the Expense model. This handles the data fetching and transformation.
 
 ### SettingsView.swift
-This view allows the user to update their annual income amount. This view consists of a navigation bar with a cancel button to close the sheet. It also has an input bar where the user can update their annual income amount and a save button that updates the database and the ExpenseListView.
+This view allows the user to update their annual income amount. It consists of a navigation bar with a cancel button to close the sheet. It also has an input bar where the user can update their annual income amount and a save button that updates the database and the ExpenseListView.
