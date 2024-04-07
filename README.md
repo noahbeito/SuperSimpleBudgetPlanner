@@ -1,5 +1,5 @@
 # Simple Money
-## Video Demo:  <URL HERE>
+## Video Demo:  [<URL HERE>](https://youtu.be/JPBNKzk2Pvs)
 ## Description:
 The Simple Budget Planner is a user-friendly mobile application designed to help users manage their finances effectively. Developed in Swift, the app utilizes SwiftUI for the front-end interface, providing a clean and intuitive user experience.
 
@@ -53,3 +53,14 @@ This file defines a ViewModel that provides the data and behavior needed by the 
 
 ### SettingsView.swift
 This view allows the user to update their annual income amount. It consists of a navigation bar with a cancel button to close the sheet. It also has an input bar where the user can update their annual income amount and a save button that updates the database and the ExpenseListView.
+
+## Roadmap:
+
+#### Daily Expense Detail View
+This would provide users with a more detailed breakdown of their expenses on a particular day. It could help users understand their spending habits better and make more informed financial decisions.
+
+#### Recurring Expenses
+This feature would be very useful for users to track regular payments like rent, utilities, subscriptions, etc. It could help ensure that users are always aware of these recurring expenses and account for them in their budget.
+
+#### Credit Card Integration
+This would automate the process of entering expenses into the app, making it easier for users to keep their expense tracking up-to-date. It could also provide real-time updates on spending, which could help users avoid overspending.
