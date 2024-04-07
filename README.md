@@ -11,55 +11,45 @@ Adding a new expense is made simple with the + button. This opens a new screen w
 
 The app's database comprises two tables. The 'users' table stores user-specific information such as user id, account creation date, annual income, and email. The 'expenses' table records expense-related data, including expense id, creation timestamp, user_id (as a foreign key), amount, description, and expense date.
 
-## Files
-
-### SuperSimpleBudgetPlannerApp.swift
-* The file that houses the App. Here we initialize a UserSession State Object and pass it to the ContentView as an Environment Object, so that the app has access to the information stored in the UserSession.
+## File Descriptions
+SuperSimpleBudgetPlannerApp.swift
+This file houses the App. Here, we initialize a UserSession State Object and pass it to the ContentView as an Environment Object, so that the app has access to the information stored in the UserSession.
 
 ### ContentView.swift
-* checks if a user is logged in
-* if logged in, it shows the landing page, ExpenseListView
-* if not logged in, it shows the LoginView
+This view checks if a user is logged in. If logged in, it shows the landing page, ExpenseListView. If not logged in, it shows the LoginView.
 
 ### Assets
-* Stores Colors and Logo
+This folder stores Colors and Logo assets.
 
 ### Supabase.swift
-* Initializes the Supabase Client and Authentication
+This file initializes the Supabase Client and Authentication.
 
 ### LoginView.swift
-* Allows returning users to input their email and password to login to the app
-* Option to go to the SignupView for new users
+This view allows returning users to input their email and password to login to the app. There is also an option to go to the SignupView for new users.
 
 ### SignupView.swift
-* Allows a new user to sign up for an account and log in
-* If they already have an account, they can navigate back to the LoginView
+This view allows a new user to sign up for an account and log in. If they already have an account, they can navigate back to the LoginView.
 
 ### ExpenseListView.swift
-* Landing page for the app
-* Shows a list, of which each cell is a day. The current day shows at the top of the list. In each cell, it shows the overview of the users spending for that day, compared to their avg daily income. It also shows a net profit or loss for that day.
-* The settings button in the leading edge of the nav bar opens the SettingsView as a sheet.
-* The plus button in the trailing edge of the nav bar opens the AddExpenseView as a sheet.
+This is the landing page for the app. It shows a list, with each cell representing a day. The current day shows at the top of the list. In each cell, it shows the overview of the users spending for that day, compared to their average daily income. It also shows a net profit or loss for that day. The settings button in the leading edge of the nav bar opens the SettingsView as a sheet. The plus button in the trailing edge of the nav bar opens the AddExpenseView as a sheet.
 
 ### UserSession.swift
-* UserSession Class that manages the current user's session data. It is an observable object, meaning SwiftUI can observe it for any changes and update the UI accordingly.
-* The user property is `@Published` marking it as a single source of truth for the app. When there is a change to the user property, any views that depend on its data will be recomputed.
-* The user property is initialized with an empty user by default.
+This class manages the current user's session data. It is an observable object, meaning SwiftUI can observe it for any changes and update the UI accordingly. The user property is @Published, marking it as a single source of truth for the app. When there is a change to the user property, any views that depend on its data will be recomputed. The user property is initialized with an empty user by default.
 
 ### AddExpenseView.swift
-* This view is displayed as a SwiftUI sheet. It shows two buttons in the navigation bar: a cancel button and an add button. The cancel button closes the sheet and returns the user to the ExpenseListView. The Add button adds whatever info the user has added into the form for their new expense to the database table expenses and updates the expense amounts in the ExpenseListView for the date of the expense. The form allows the user to input a text name and text description of the expense. It also uses the built in date picker to allow the user to pick a date for the expense. 
+This view is displayed as a SwiftUI sheet. It shows two buttons in the navigation bar: a cancel button and an add button. The cancel button closes the sheet and returns the user to the ExpenseListView. The Add button adds whatever info the user has added into the form for their new expense to the database table expenses and updates the expense amounts in the ExpenseListView for the date of the expense. The form allows the user to input a text name and text description of the expense. It also uses the built-in date picker to allow the user to pick a date for the expense.
 
 ### User.swift
-* Defines a User struct. It is a simple data model representing a user of the app. It conforms to the Codable protocol allowing for encoding to and decoding from a serialized format like JSON. This makes it easier to save and load User instances.
+This file defines a User struct. It is a simple data model representing a user of the app. It conforms to the Codable protocol allowing for encoding to and decoding from a serialized format like JSON. This makes it easier to save and load User instances.
 
 ### Expense.swift
-* Data model that represents an expense in the app. Other than the properties for the expense itself (id, amount, date and description) it has a computed property called dateAsDate which converts the date string to a Date object.
+This file defines a data model that represents an expense in the app. Other than the properties for the expense itself (id, amount, date, and description), it has a computed property called dateAsDate which converts the date string to a Date object.
 
 ### DateFormatter.swift
-* Extension of the DateFormatter class to format the date string in specific ways to be used throughout the app.
+This file contains an extension of the DateFormatter class to format the date string in specific ways to be used throughout the app.
 
 ### ExpensesData.swift
-* ViewModel that provides the data and behavior needed by the View to display and manipulate the expenses. It helps the View interact with the Expense model. This handles the data fetching and transformation. 
+This file defines a ViewModel that provides the data and behavior needed by the View to display and manipulate the expenses. It helps the View interact with the Expense model. This handles the data fetching and transformation.
 
 ### SettingsView.swift
-* View that allows the user to update their annual income amount. This view consists of a navigation bar with a cancel button to close the sheet. It also has an input bar where the user can update their annual income amount and a save button that updates the database and the ExpenseListView. 
+This view allows the user to update their annual income amount. This view consists of a navigation bar with a cancel button to close the sheet. It also has an input bar where the user can update their annual income amount and a save button that updates the database and the ExpenseListView.
