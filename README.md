@@ -1,6 +1,6 @@
 # Simple Money
-#### Video Demo:  <URL HERE>
-#### Description:
+## Video Demo:  <URL HERE>
+## Description:
 The Simple Budget Planner is a user-friendly mobile application designed to help users manage their finances effectively. Developed in Swift, the app utilizes SwiftUI for the front-end interface, providing a clean and intuitive user experience.
 
 The backend is powered by Supabase, a scalable and reliable solution for data management. User authentication, including login and sign-up flows, is handled seamlessly by Supabase Auth.
