@@ -1,5 +1,5 @@
 # Simple Money
-## Video Demo:  [<URL HERE>](https://youtu.be/JPBNKzk2Pvs)
+## Video Demo:  [Click here](https://youtu.be/JPBNKzk2Pvs)
 ## Description:
 The Simple Budget Planner is a user-friendly mobile application designed to help users manage their finances effectively. Developed in Swift, the app utilizes SwiftUI for the front-end interface, providing a clean and intuitive user experience.
 
